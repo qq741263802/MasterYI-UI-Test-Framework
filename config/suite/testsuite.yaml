@@ -1,0 +1,35 @@
+# 测试标题
+title: 易大师框架测试
+# 执行浏览器类型
+# browserType: [chrome, ie, firefox]
+browserType: chrome
+# 该用例执行失败了是否中断整个测试流程？默认为false,可单独给每个用例配置
+failInterrupt: false
+# tag为每个用例的标签，在分布式运行时，标签相同的用例将会被分配到同一个执行机器上
+tag: default
+
+# 指定测试报告处理器，测试结束之后将会按顺序执行
+reportManager:
+  # 可用使用类名或者全类名，支持带参数，字符串请加单双引号 
+  - ZTestReportManager('namessd', 22)
+
+# 测试用例组
+cases:
+  - name: 163邮箱测试 
+    method: com.dcits.test.baidu.usecase.Baidu.search
+    # 是否执行该用例或者组合用例，为flase时该用例不会被执行
+    enabled: true   
+    tag: 2
+    failInterrupt: true
+    # browserType: [chrome, ie, firefox]
+    browserType: chrome
+  
+  - name: 百度搜索
+    method: com.dcits.test.baidu.usecase.Baidu.search
+    enabled: false
+    tag: 3
+    failInterrupt: true
+    browserType: [chrome, firefox]
+
+  
+  

@@ -1,0 +1,33 @@
+# 网易邮箱登录页面
+LoginPage: 
+  url: https://mail.163.com/
+  
+  loginframe: xpath //*[contains(@id,"x-URS-iframe")]
+  
+  用户名输入框: xpath //*[@name="email"] loginframe     
+  密码输入框: xpath //*[@name="password"] loginframe
+  登录按钮: id dologin loginframe
+  
+# 网易邮箱页面
+MailPage: 
+  writeframe: xpath //div[@class="APP-editor-edtr"]/iframe
+
+  用户标签: id spnUid
+  写信按钮: xpath //div[@id="dvNavTop"]/ul/li[2]/span[2]  
+  收信人: className bz0
+  收信人地址: className nui-editableAddr-ipt
+  发信按钮: xpath //span[text()="发送"][1]
+  
+  发送成功确认按钮: xpath //*[@class="nui-msgbox-ft-btns"]/div/span
+  收信按钮: xpath //div[@id="dvNavTop"]/ul/li[1]
+  邮件搜索框: classname nui-ipt-input[1]
+  收信列表链接: xpath //span[contains(@id,"SubjectSpan")][1]
+  回复按钮: xpath '//span[text()="回 复"][1]'
+
+  邮件内容输入框: xpath //html/body writeframe
+  
+  登出按钮: xpath /html/body/header/div/ul/li[last()]/a
+  
+# 网易邮箱成功退出的页面
+MailLogoutPage: 
+  重新登录按钮: id js-relogin

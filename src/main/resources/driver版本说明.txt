@@ -1,0 +1,24 @@
+Windows版本
+
+chromedriver=v2.40 对应chrome版本为v66-68
+chromeDriver下载地址：http://npm.taobao.org/mirrors/chromedriver/
+chrome下载地址： https://www.chromedownloads.net/
+crhome和chromedriver的版本对应关系：https://blog.csdn.net/huilan_same/article/details/51896672
+
+iedriver=v3.13 对应selenium的版本3.13.0，理论上支持ie8 - 11
+iedriver下载地址：http://selenium-release.storage.googleapis.com/index.html
+使用ie进行测试时可能会出现一些莫名其妙的问题，请参考https://blog.csdn.net/a5650892/article/details/78380289
+测试时，请一定要关闭所有的安全软件
+
+operadriver由于用的人比较少，暂时没有放进来
+
+firefox为最新版64位 v0.23.0，https://github.com/mozilla/geckodriver/releases/也可以自行下载
+如果启动失败，尝试更新下firefox的版本
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+MacOs版本
+Chromedriver = v2.42 ,对应chrome版本为v70以上
+geckodriver = v0.23.0
+
+其他驱动请根据需要自行添加

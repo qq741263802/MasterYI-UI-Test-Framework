@@ -1,0 +1,31 @@
+1、下载selenium-server-standalone-2.52.0.jar到本地
+百度云：https://pan.baidu.com/s/1oiFvfakJKa_fyw5ikqu5NA
+打开命令行cd到jar包目录
+运行下面的命令来启动Grid-hub(可以看做是master):
+java -jar selenium-server-standalone-2.52.0.jar -role hub -maxSession 40
+
+-maxSession
+表示最大能够开启的session个数，当成最大可同时运行的并发数即可。
+
+
+2、将selenium-server-standalone-2.52.0.jar拷贝到所有的远程执行机，并在每台机器都执行下面的命令：
+java -jar selenium-server-standalone-2.52.0.jar -role node -port 6666 -maxSession 20 -hub http://127.0.0.1:4444/grid/register -Dwebdriver.chrome.driver=C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chromedriver.exe  -browser "browserName=chrome,maxInstances=5"
+
+-hub http://127.0.0.1:4444/grid/register 
+请将127.0.0.1修改为你本机(master机器)的内网地址（与远程执行机所在网络的环境）
+-browser "browserName=chrome,maxInstances=5"
+设置浏览器 browserName=chrome表明该远程机可以开启的浏览器类型为chrome，maxInstances=5标识最大可启动的浏览器实例
+-Dwebdriver.chrome.driver=C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chromedriver.exe
+修改为远程执行机上的chromeDriver驱动绝对路径，如果是firefox则不需要设置，ie则设置IEDriver
+
+
+3、将seleniumConfig.properties中的remote_mode修改为true
+
+
+4、按照说明运行测试，注意tag不同才能分到不同的测试机器上运行测试
+
+5、浏览器查看状态
+http://localhost:4444/grid/console
+
+
+具体参数含义可参考https://blog.csdn.net/five3/article/details/9415067

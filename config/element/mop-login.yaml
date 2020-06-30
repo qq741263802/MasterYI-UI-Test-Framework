@@ -1,0 +1,13 @@
+
+LoginPage:
+  url: https://lgxmopuat.liby.com.cn/
+  username: xpath //*[@id="username"]
+  password: xpath //*[@id="password"]
+  submit: xpath //*[@id="sign-in"]/div[4]/input
+  ka: xpath //*[@id="menu1"]/li[11]/a
+  #系统管理
+  system: //*[@id="menu"]/div[8]/div[1]/a
+
+
+
+
