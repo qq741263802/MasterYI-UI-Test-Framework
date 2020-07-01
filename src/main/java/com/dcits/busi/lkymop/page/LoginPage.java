@@ -12,8 +12,10 @@ public class LoginPage extends BasePage {
 	
 	public PageElement username;	
 	public PageElement password;	
-	public PageElement submit;	
-	
+	public PageElement submit;
+	public PageElement ka;
+	public PageElement system;
+
 	public void login(String username,String password)
 	{
       this.username.sendKeys(username);
@@ -23,4 +25,12 @@ public class LoginPage extends BasePage {
 
 
 	}
+	public  void kaClick()
+	{
+
+		this.ka.click();
+		this.system.click();
+
+	}
+
 }

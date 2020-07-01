@@ -6,7 +6,7 @@ LoginPage:
   submit: xpath //*[@id="sign-in"]/div[4]/input
   ka: xpath //*[@id="menu1"]/li[11]/a
   #系统管理
-  system: //*[@id="menu"]/div[8]/div[1]/a
+  system: xpath //*[@id="menu"]/div[8]/div[1]/a
 
 
 

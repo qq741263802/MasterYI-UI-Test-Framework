@@ -1,6 +1,7 @@
 package common;
 
 import com.dcits.busi.lkymop.usecase.LoginTest;
+import com.dcits.busi.lkymop.usecase.UserTest;
 import com.dcits.yi.WebTest;
 import com.dcits.yi.ui.report.manage.MailNotifyReportManager;
 
@@ -15,7 +16,7 @@ public class CommonTest {
 	
 	public static void main(String[] args) throws Exception {
 		//实例化WebTest对象，可传入suite文件或者多个测试用例类
-		WebTest test = new WebTest(LoginTest.class);
+		WebTest test = new WebTest(LoginTest.class, UserTest.class);
 		
 		//传入一个或多个测试报告处理器对象
 		

@@ -1,4 +1,4 @@
 
 UserPage:
-  userlist: //*[@id="collapse1263733468465364993"]/div/ul/li[1]/a
-  userquerybypage: //*[@id="layout-content"]/div/form/div/div[8]/div/div/button[1]/span
+  userlist: xpath //*[@id="collapse1263733468465364993"]/div/ul/li[1]/a
+  userquerybypage: xpath //*[@id="layout-content"]/div/form/div/div[8]/div/div/button[1]/span
