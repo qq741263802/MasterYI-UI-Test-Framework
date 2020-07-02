@@ -19,7 +19,7 @@ public class CommonTest {
 
 		WebTest test = new WebTest(LoginTest.class);
 
-
+        //测试
 		//传入一个或多个测试报告处理器对象
 		
 		test.setReportManagers(new MailNotifyReportManager());		
