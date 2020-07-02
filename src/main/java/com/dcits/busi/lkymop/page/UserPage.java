@@ -12,12 +12,17 @@ public class UserPage extends BasePage {
 	
 	public PageElement userlist;	
 	public PageElement userquerybypage;
+	public PageElement nameselect;
+	public PageElement add;
 
-
-	public void usersend()
+	/**
+	 * 员工查询
+	 */
+	public void usersend(String username)
 	{
 		this.userlist.click();
 		this.userquerybypage.click();
+		this.nameselect.sendKeys(username);
 		screenshot();
 
 	}

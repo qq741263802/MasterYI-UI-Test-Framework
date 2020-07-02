@@ -61,7 +61,7 @@ public class DemoTest {
         }
         return sb.toString();
     }
-    //dev分支
+
     //将16进制字符串转化为二进制数组
     public static byte[] parseHexStr2Byte(String hexStr) {
         if (hexStr.length() < 1)

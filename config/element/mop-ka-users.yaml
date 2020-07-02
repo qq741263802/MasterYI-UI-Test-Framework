@@ -1,4 +1,10 @@
 
 UserPage:
+  #切换ifname
+  useriframe: xpath //*[@id="if1263733468465364994"]
+
   userlist: xpath //*[@id="collapse1263733468465364993"]/div/ul/li[1]/a
   userquerybypage: xpath //*[@id="layout-content"]/div/form/div/div[8]/div/div/button[1]/span
+  nameselect: xpath //*[@id="layout-content"]/div/form/div/div[1]/div/label useriframe
+  add: xpath //*[@id="layout-content"]/div/div[1]/button[1]/span useriframe
+
