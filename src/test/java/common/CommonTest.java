@@ -18,7 +18,7 @@ public class CommonTest {
 		//实例化WebTest对象，可传入suite文件或者多个测试用例类，多个类用逗号隔开
 
 		WebTest test = new WebTest(LoginTest.class);
-		//dev分支
+
 		//传入一个或多个测试报告处理器对象
 		
 		test.setReportManagers(new MailNotifyReportManager());		
