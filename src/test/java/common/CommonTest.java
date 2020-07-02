@@ -15,7 +15,7 @@ import com.dcits.yi.ui.report.manage.MailNotifyReportManager;
 public class CommonTest {
 	
 	public static void main(String[] args) throws Exception {
-		//实例化WebTest对象，可传入suite文件或者多个测试用例类，多个类用逗号隔开
+		//实例化WebTest对象，可传入suite文件或者多个测试用例类，多个类用逗号隔开,测试
 
 		WebTest test = new WebTest(LoginTest.class);
 		
